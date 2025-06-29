@@ -1,3 +1,204 @@
+/* CSS RESET START
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 body {
-  color: red;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/** Reset until here **/
+
+:root {
+  --main-color: #568500;
+  --main-color-dark: #293f00;
+  --main-color-light: #72af00;
+  --secondary-color: rgb(173, 134, 7);
+  --secondary-color-light: rgb(199, 154, 9);
+  --secondary-color-dark: rgb(134, 104, 4);
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 5px 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  &:hover {
+    background-color: var(--secondary-color-light);
+    cursor: pointer;
+  }
+  &:active {
+    background-color: var(--secondary-color-dark);
+  }
+}
+
+nav {
+  background-color: var(--main-color-dark);
+  height: 50px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  button {
+    font-weight: bold;
+  }
+}
+
+h1 {
+  color: var(--main-color-dark);
+}
+
+#content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 3fr;
+  grid-template-rows: minmax(120px, 10%) 1fr;
+  gap: 20px;
+
+  .restaurant-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    grid-row: 1 / span 2;
+  }
+
 }

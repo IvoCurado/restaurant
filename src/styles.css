@@ -178,6 +178,7 @@ nav {
   gap: 20px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   button {
     font-weight: bold;
   }
@@ -200,5 +201,4 @@ h1 {
     object-fit: cover;
     grid-row: 1 / span 2;
   }
-
 }
